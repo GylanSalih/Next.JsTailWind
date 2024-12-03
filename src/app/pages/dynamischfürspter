@@ -1,0 +1,47 @@
+'use client'; // Für clientseitiges Rendering
+
+import { useRouter } from 'next/router';
+import React from 'react';
+
+// Beispielhafte Datenbank für Karten
+const cardDetails = {
+  "1": {
+    imgSrc: "/assets/img/reduced_images/New3.jpeg",
+    title: "Karte 1",
+    category: "Coding",
+    rarity: "rare holo v1",
+    description: "Dies ist eine detaillierte Beschreibung der Karte 1.",
+  },
+  "2": {
+    imgSrc: "/assets/gifs/RedSamurai.gif",
+    title: "Karte 2",
+    category: "Coding",
+    rarity: "rare holo vmax",
+    description: "Dies ist eine detaillierte Beschreibung der Karte 2.",
+  },
+  // Weitere Karten hier hinzufügen
+};
+
+const CardPage = () => {
+  const router = useRouter();
+  const { cardId } = router.query;
+
+  // Hole die Details der Karte basierend auf der ID
+  const card = cardDetails[cardId];
+
+  if (!card) {
+    return <p>Karte nicht gefunden.</p>;
+  }
+
+  return (
+    <div>
+      <h1>{card.title}</h1>
+      <img src={card.imgSrc} alt={card.title} />
+      <p>Kategorie: {card.category}</p>
+      <p>Seltenheit: {card.rarity}</p>
+      <p>{card.description}</p>
+    </div>
+  );
+};
+
+export default CardPage;

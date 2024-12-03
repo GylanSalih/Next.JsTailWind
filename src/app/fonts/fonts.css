@@ -1,0 +1,28 @@
+/*-----------------------------------------------------------*/
+/* Fonts CSS */
+/*-----------------------------------------------------------*/
+
+/* Alle Fonts Lokal eingebunden */
+
+/* -------------------Avant Garde Font START--------------------------*/
+
+@font-face {
+  font-family: "Geist Sans";
+  src: url("GeistVF.woff") format("woff");
+  font-weight: 400 900; /* Definiere die unterstützten Gewichtungen */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "NotoSansJP";
+  src: url("NotoSansJP-Regular.woff2") format("woff");
+  font-weight: 400 900; /* Definiere die unterstützten Gewichtungen */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Quicksand";
+  src: url("Quicksand-SemiBold.ttf") format("woff");
+  font-weight: 400 900; /* Definiere die unterstützten Gewichtungen */
+  font-style: normal;
+}

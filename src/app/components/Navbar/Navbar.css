@@ -1,0 +1,116 @@
+/* Allgemeine Navbar Styles */
+.navbar {
+  position: fixed; /* Fixiert die Navbar oben */
+  top: 0;
+  left: 0;
+  width: 100%; /* Über die ganze Breite der Seite */
+  padding: 14px 0;
+  background-color: transparent; /* Anfangs transparent */
+  z-index: 1000; /* Stelle sicher, dass die Navbar immer oben ist */
+}
+
+/* Sticky Navbar Styles (wenn gescrollt) */
+.navbar.sticky {
+  background-color: rgb(255, 255, 255); /* Hintergrundfarbe wird weiß, wenn gescrollt wird */
+}
+
+/* Dark Mode Styles für Navbar */
+.navbar.sticky.dark-mode {
+  background-color: #000000; /* Dunkler Hintergrund im Dark Mode */
+}
+
+/* Keine Transition bei Dark Mode Toggle */
+.navbar.no-transition {
+  position: fixed; /* Navbar bleibt oben */
+  top: 0;
+  left: 0;
+  width: 100%; /* Über die ganze Breite der Seite */
+  padding: 14px 0;
+  background-color: rgba(255, 0, 0, 0);
+  z-index: 1000; /* Sicherstellen, dass der Navbar immer oben ist */
+}
+
+.dark-mode .navbar.no-transition {
+  position: fixed; /* Navbar bleibt oben */
+  top: 0;
+  left: 0;
+  width: 100%; /* Über die ganze Breite der Seite */
+  padding: 14px 0;
+  background-color: rgba(255, 217, 0, 0);
+  z-index: 1000; /* Sicherstellen, dass der Navbar immer oben ist */
+}
+
+/* Navbar Container Styles */
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Navbar Logo */
+.logo img {
+  width: 64px; /* Passen Sie die Größe des Logos an */
+  filter: none;  /* Kein Filter für das Logo im Light Mode */
+}
+
+/* Navigation Links Styles */
+.nav-links {
+  flex-grow: 1;
+}
+
+.nav-links ul {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav-links li {
+  margin: 0 15px;
+}
+
+/* Standard Link Farben */
+.nav-links li a {
+  text-decoration: none;
+  font-size: 18px;
+  padding: 5px 10px;
+  color: #000000;  /* Standard Textfarbe für Links */
+  font-family: "QuickSand";
+}
+
+/* Standard Link Farben im Dark Mode */
+.dark-mode .nav-links li a {
+  text-decoration: none;
+  font-size: 18px;
+  padding: 5px 10px;
+  color: #ffffff;  /* Weiße Schrift für Links im Dunkelmodus */
+}
+
+/* Hover-Effekte */
+.nav-links li a:hover {
+  background-color: #00ff22;
+}
+
+
+/* ------------------------------- */
+
+/* Dark Mode Styles */
+.navbar.dark-mode {
+  background-color: #000000;  /* Dunkler Hintergrund */
+}
+
+.navbar.dark-mode .nav-links li a {
+  color: #fff;  /* Weiße Schrift für Links im Dunkelmodus */
+}
+
+.navbar.dark-mode .darkmode-toggle button {
+  color: #fff;  /* Weiße Schrift für den Button */
+}
+
+.navbar.dark-mode .darkmode-toggle button:hover {
+  background-color: #555;  /* Dunkelgrauer Hover-Effekt im Dunkelmodus */
+}
